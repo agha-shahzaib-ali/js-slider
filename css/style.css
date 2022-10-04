@@ -1,0 +1,114 @@
+.heading {
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  text-transform: uppercase;
+}
+.heading a img {
+  width: 35px;
+  padding: 0 0.75%;
+  transition: all ease-in-out 0.3s;
+}
+.heading a img:hover {
+  opacity: 0.75;
+  transform: scale(1.3);
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+.container .slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  /* gap: 2%; */
+}
+.container .slider .images-container {
+  width: 300px;
+  height: 100%;
+  position: relative;
+}
+.container .slider .images-container img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all ease 0.3s;
+  /* left: -100%; */
+  opacity: 0;
+  z-index: -2;
+}
+/* ActiveImgEl class */
+.container .slider .images-container img.active {
+  left: 0;
+  opacity: 1;
+  z-index: 9;
+}
+/* Animation Classes 4 */
+.container .slider .images-container img.animation-slide-to-left {
+  animation: slideToLeft ease-in-out 0.3s;
+}
+.container .slider .images-container img.animation-slide-to-right {
+  animation: slideToRight ease-in-out 0.3s;
+}
+.container .slider .images-container img.animation-slide-from-left {
+  animation: slideFromLeft ease-in-out 0.3s;
+}
+.container .slider .images-container img.animation-slide-from-right {
+  animation: slideFromRight ease-in-out 0.3s;
+}
+
+.container .arrow {
+  max-width: 120px;
+  height: 100%;
+  padding: 0 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease 200ms;
+  border: 1px solid black;
+}
+.container .arrow:hover {
+  opacity: 0.5;
+  background-color: hotpink;
+}
+.container .arrow img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Slide Animation Keyframes */
+@keyframes slideToLeft {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes slideToRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes slideFromLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes slideFromRight {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
