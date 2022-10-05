@@ -1,0 +1,11 @@
+@media screen and (max-width: 786px) {
+  body {
+    background-color: lightgreen;
+  }
+  .container {
+    max-width: 50vw;
+  }
+  .container .slider {
+    height: 250px;
+  }
+}
