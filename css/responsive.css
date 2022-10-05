@@ -1,9 +1,7 @@
 @media screen and (max-width: 786px) {
-  body {
-    background-color: lightgreen;
-  }
   .container {
-    max-width: 50vw;
+    max-width: 90vw;
+    margin-top: 12.5%;
   }
   .container .slider {
     height: 250px;
